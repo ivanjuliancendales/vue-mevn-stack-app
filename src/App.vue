@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- Nav bar -->
+    <nav
+      class="navbar navbar-dark bg-dark justify-content-between flex-nowrap flex-row"
+    >
+      <div class="container">
+        <a class="navbar-brand float-left">Sistema de Evaluación 360º</a>
+        <ul class="nav navbar-nav flex-row float-right">
+          <li class="nav-item col-md-5">
+            <router-link class="nav-link pr-3" to="/"
+              >Ingrese evaluación</router-link
+            >
+          </li>
+          <li class="nav-item col-md-5">
+            <router-link class="nav-link" to="/view">Visualice evaluaciones</router-link>
+          </li>
+        </ul>
+
+        <button class="btn btn-success navbar-btn">Contacto</button>
+
+      </div>
+    </nav>
+    <!-- Router view -->
+    <div class="container mt-5">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
